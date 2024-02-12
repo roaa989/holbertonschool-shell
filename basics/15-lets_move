@@ -1,5 +1,8 @@
 #!/bin/bash
-mv [A-Z]* /tmp/u
+# Find all files starting with an uppercase letter
+find . -type f -regextype posix -regex "^[A-Z].*" -exec mv {} /tmp/u \;
+
+echo "Files moved successfully!"
 
 
  
